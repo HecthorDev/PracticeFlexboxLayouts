@@ -1,0 +1,146 @@
+/*Cabecera*/
+.cabecera__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+}
+
+.cabecera__buscar__item {
+    display: none;
+}
+
+.rodapie__container {
+    display: flex;
+    /*flex-direction: column;
+    flex-wrap: wrap;*/
+    flex-flow: column wrap;
+}
+
+/*Seccion Superior*/
+.superior__seccion__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: scroll;
+    gap: 15px;
+}
+
+/*Videos*/
+
+.videos__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.videos__item {
+    height: 303px;
+    width: 280px;
+    flex-grow: 1;
+}
+
+/*Menu*/
+.menu__container {
+    position: fixed;
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.menu__lista li {
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+ 
+
+@media (min-width: 824px) {
+    /*Cabecera*/
+    .cabecera__buscar__item {
+        display: block;
+    }
+    /*Footer*/
+    .rodapie__container {
+        justify-content: space-between;
+    }
+}
+
+/*MENU TABLETS*/
+
+@media (min-width: 834px) {
+
+    .menu__container {
+        left: 0;
+        height: auto;
+        width: 74px;
+        top: 80px;
+        }
+    
+    .menu__lista {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 15px;
+        gap: 33px;
+        }
+    }
+
+/*MENU DESKTOP*/
+
+@media (min-width: 1440px) {
+    .menu__container {
+        width: 239px;
+        overflow: scroll;
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+    display: flex;
+    }
+
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px;
+    }
+
+    .menu__itens {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .menu__lista:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+
+    .videojuegos {
+        order: 3;
+    }
+
+    .peliculas {
+        order: 2;
+    }
+
+    .premium {
+        order: 1;
+    }
+}
